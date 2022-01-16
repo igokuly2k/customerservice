@@ -1,10 +1,12 @@
 import { Request, ResponseToolkit } from "@hapi/hapi";
+const repo = require('../database').default;
 
 const CreateCus = {
     method: 'GET',
     path: '/customer',
-    handler: (request:Request,h:ResponseToolkit):string => {
-        return "All Customers Fetched";
+    handler: async (request:Request,h:ResponseToolkit) => {
+        const l = await repo;
+        return l.find();
     }
 };
 

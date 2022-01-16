@@ -11,7 +11,7 @@ const {SHARED_KEY} = require('./config');
 const Hapi = require('@hapi/hapi');
 const Jwt = require('@hapi/jwt');
 import { ResponseToolkit } from "@hapi/hapi";
-
+import "reflect-metadata";
 
 const init = async () => {
 
